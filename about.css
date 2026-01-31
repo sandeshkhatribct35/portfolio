@@ -6,6 +6,8 @@
   align-items: center;
   padding: 100px 10%;
   background: #0f172a; /* Dark background for contrast */
+  position: relative;
+  overflow: hidden;
 }
 
 .about img {
@@ -13,12 +15,18 @@
   max-width: 360px;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+  z-index: 1;
 }
 
 .about img:hover {
-  transform: scale(1.05);
+  transform: scale(1.05) rotate(1deg);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  filter: brightness(1.1);
+}
+
+.about-content {
+  z-index: 2;
 }
 
 .about-content h2 {
@@ -26,6 +34,9 @@
   margin-bottom: 20px;
   color: #ffffff;
   position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
 }
 
 .about-content h2::after {
@@ -43,6 +54,16 @@
   line-height: 1.8;
   margin-bottom: 16px;
   font-size: 1.05rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out 0.2s;
+}
+
+/* Scroll reveal for About content */
+.about.reveal .about-content h2,
+.about.reveal .about-content p {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media screen and (max-width: 900px) {
