@@ -6,13 +6,11 @@
   gap: 60px;
   min-height: 100vh;
   padding: 120px 10%;
-  background: linear-gradient(135deg, #0f172a, #1e293b); /* dark gradient for contrast */
-  overflow: hidden;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
 }
 
 .hero-left h1 {
   font-size: 3.8rem;
-  letter-spacing: -1px;
   color: #ffffff;
   font-weight: 700;
   line-height: 1.1;
@@ -33,6 +31,7 @@
   font-size: 1.1rem;
 }
 
+/* Buttons */
 .hero-actions button {
   padding: 14px 28px;
   border-radius: 10px;
@@ -40,8 +39,8 @@
   background: #2563eb;
   color: white;
   margin-right: 12px;
-  cursor: pointer;
   font-weight: 500;
+  cursor: pointer;
   transition: all 0.35s ease;
   box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
 }
@@ -63,6 +62,7 @@
   border: none;
 }
 
+/* Hero Image */
 .hero-right img {
   width: 100%;
   max-width: 360px;
@@ -77,16 +77,22 @@
   100% { transform: translateY(0) rotateZ(0deg); }
 }
 
-/* TYPED TEXT EFFECT */
+/* Typed Text with blinking cursor */
 .typed-text {
   border-right: 2px solid #2563eb;
   padding-right: 5px;
   white-space: nowrap;
   overflow: hidden;
   font-weight: 600;
+  animation: blinkCursor 0.7s steps(44) infinite normal;
 }
 
-/* RESPONSIVE */
+@keyframes blinkCursor {
+  0%, 50% { border-color: #2563eb; }
+  50.01%, 100% { border-color: transparent; }
+}
+
+/* Responsive */
 @media(max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
@@ -99,18 +105,5 @@
   }
   .hero-right img {
     max-width: 280px;
-  }
-  .hero-left h1 {
-    font-size: 3rem;
-  }
-  .hero-left h2 {
-    font-size: 1.3rem;
-  }
-  .hero-left p {
-    font-size: 1rem;
-  }
-  .hero-actions button {
-    width: 140px;
-    margin: 10px 5px;
   }
 }
