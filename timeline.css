@@ -1,107 +1,31 @@
-/* =========================
-   TIMELINE SECTION
-========================= */
-
 .timeline{
   padding:120px 10%;
-  background:#0f172a;
 }
-
 .timeline h2{
-  font-size:3rem;
+  font-size:2.8rem;
   text-align:center;
-  color:#ffffff;
-  margin-bottom:40px;
-  position:relative;
 }
-
-/* Accent line */
-.timeline h2::after{
-  content:'';
-  display:block;
-  width:80px;
-  height:3px;
-  background:linear-gradient(90deg,#6366f1,#2563eb);
-  margin:10px auto 0;
-  border-radius:2px;
-}
-
-/* Grid */
 .timeline-container{
-  margin-top:50px;
+  margin-top:40px;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   gap:28px;
 }
-
-/* Timeline Card */
 .timeline-item{
-  padding:32px;
-  border-radius:16px;
+  padding:30px;
+  border-radius:14px;
   background:#020617;
-  box-shadow:0 10px 25px rgba(0,0,0,0.6);
-  transition:all .4s ease;
-  position:relative;
-  overflow:hidden;
-  cursor:pointer;
-  opacity:0;
-  transform:translateY(40px);
+  transition:transform .3s;
 }
-
-/* Scroll Reveal */
-.timeline-item.active{
-  opacity:1;
-  transform:translateY(0);
-  transition:all .6s ease-out;
-}
-
-/* Hover Glow Overlay */
-.timeline-item::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:rgba(37,99,235,0.08);
-  opacity:0;
-  transition:.4s;
-  z-index:0;
-}
-
-.timeline-item:hover::before{
-  opacity:1;
-}
-
-/* Hover Effect */
 .timeline-item:hover{
-  transform:translateY(-8px) scale(1.03);
-  box-shadow:0 15px 35px rgba(37,99,235,0.45);
+  transform:translateY(-6px);
 }
-
-/* Year Badge */
 .timeline-year{
-  font-weight:700;
-  font-size:1.1rem;
+  font-weight:bold;
   color:#2563eb;
-  margin-bottom:10px;
-  display:inline-block;
-  padding:6px 14px;
-  border-radius:20px;
-  background:rgba(37,99,235,0.1);
-  position:relative;
-  z-index:1;
+  margin-bottom:6px;
+  display:block;
 }
-
-/* Text */
 .timeline-item p{
   color:#cbd5f5;
-  line-height:1.7;
-  font-size:1rem;
-  position:relative;
-  z-index:1;
-}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-  .timeline{
-    padding:80px 5%;
-  }
 }
