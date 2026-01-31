@@ -1,57 +1,9 @@
-/* =========================
-   Smooth Scroll Function
-========================= */
+// Smooth Scroll
 function scrollToSection(id) {
   document.getElementById(id).scrollIntoView({ behavior: "smooth" });
 }
 
-/* =========================
-   Scroll Reveal (Efficient)
-========================= */
-const revealElements = document.querySelectorAll(".reveal");
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("active");
-        revealObserver.unobserve(entry.target); // reveal once
-      }
-    });
-  },
-  { threshold: 0.1 }
-);
-
-revealElements.forEach(el => revealObserver.observe(el));
-
-/* =========================
-   Animate Skill Bars
-========================= */
-const skillsSection = document.querySelector("#skills");
-let skillsAnimated = false;
-
-function animateSkills() {
-  if (skillsAnimated) return;
-  const skills = document.querySelectorAll(".skill-card .progress");
-  skills.forEach(skill => {
-    skill.style.width = skill.getAttribute("data-width");
-  });
-  skillsAnimated = true;
-}
-
-const skillsObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) animateSkills();
-    });
-  },
-  { threshold: 0.2 }
-);
-
-if (skillsSection) skillsObserver.observe(skillsSection);
-
-/* =========================
-   Typed Hero Text Effect
-========================= */
+// Typed Hero Text Effect
 const heroTexts = [
   "Hi, I'm Sandesh Khatri",
   "Quarter-Stack Developer",
@@ -83,4 +35,5 @@ function eraseHero() {
   }
 }
 
+// Start typing on page load
 window.addEventListener("load", typeHero);
