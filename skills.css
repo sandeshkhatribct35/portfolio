@@ -1,7 +1,9 @@
-/* SKILLS SECTION */
+/* =========================
+   SKILLS SECTION
+   ========================= */
 .skills {
   padding: 120px 10%;
-  background: #0f172a; /* dark background */
+  background: #0f172a; /* dark background for contrast */
 }
 
 .skills h2 {
@@ -22,6 +24,7 @@
   border-radius: 2px;
 }
 
+/* GRID OF SKILLS */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -29,6 +32,7 @@
   margin-top: 40px;
 }
 
+/* SKILL CARD */
 .skill-card {
   padding: 30px;
   border-radius: 16px;
@@ -42,6 +46,7 @@
   overflow: hidden;
 }
 
+/* HOVER OVERLAY EFFECT */
 .skill-card::before {
   content: '';
   position: absolute;
@@ -49,7 +54,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: rgba(37, 99, 235, 0.05);
+  background: rgba(37, 99, 235, 0.08);
   transition: all 0.4s ease;
   z-index: 0;
 }
@@ -58,17 +63,20 @@
   left: 0;
 }
 
+/* CARD HOVER ANIMATION */
 .skill-card:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 15px 35px rgba(37, 99, 235, 0.5);
   cursor: pointer;
 }
 
+/* SKILL TITLE */
 .skill-card h3 {
   position: relative;
   z-index: 1;
 }
 
+/* PROGRESS BAR BACKGROUND */
 .progress-bar {
   background: #334155;
   border-radius: 12px;
@@ -77,14 +85,21 @@
   overflow: hidden;
 }
 
+/* PROGRESS FILL - BRIGHT BLUE */
 .progress {
-  background: linear-gradient(90deg, #6366f1, #2563eb);
+  background: linear-gradient(90deg, #3b82f6, #2563eb); /* vibrant blue gradient */
   height: 100%;
   width: 0; /* animated by JS */
   border-radius: 12px;
   transition: width 1.5s ease-in-out;
 }
 
+/* PROGRESS BAR HOVER GLOW */
+.skill-card:hover .progress {
+  box-shadow: 0 0 10px #2563eb, 0 0 20px #3b82f6;
+}
+
+/* PERCENTAGE TEXT */
 .skill-card span {
   font-size: 0.9rem;
   color: #cbd5f5;
