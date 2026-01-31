@@ -1,44 +1,105 @@
-.contact{
-  padding:120px 10%;
-  text-align:center;
+/* CONTACT SECTION */
+.contact {
+  padding: 120px 10%;
+  text-align: center;
+  background: #0f172a; /* Dark background for contrast */
 }
-.contact h2{
-  font-size:2.8rem;
-  margin-bottom:20px;
+
+.contact h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  position: relative;
+  font-weight: 700;
 }
-.contact p{
-  color:#cbd5f5;
-  margin-bottom:20px;
+
+.contact h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #6366f1, #2563eb); /* Accent line */
+  margin: 10px auto 0 auto;
+  border-radius: 2px;
 }
-form{
-  max-width:520px;
-  margin:auto;
-  display:flex;
-  flex-direction:column;
-  gap:16px;
+
+.contact p {
+  color: #cbd5f5;
+  margin-bottom: 30px;
+  font-size: 1.05rem;
 }
-input,textarea{
-  padding:14px;
-  border-radius:6px;
-  border:none;
-  background:#020617;
-  color:white;
+
+/* Form Styling */
+form {
+  max-width: 520px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
-form button{
-  padding:14px;
-  background:#2563eb;
-  border:none;
-  border-radius:6px;
-  color:white;
-  cursor:pointer;
+
+input, textarea {
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  background: #020617;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
-.footer{
-  text-align:center;
-  padding:40px 10%;
-  color:#94a3b8;
-  font-size:0.9rem;
+
+input:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #2563eb;
 }
-.footer a{
-  color:#2563eb;
-  text-decoration:none;
+
+/* Submit Button */
+form button {
+  padding: 14px;
+  background: #2563eb;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(37, 99, 235, 0.4);
+}
+
+/* FOOTER STYLING */
+.footer {
+  text-align: center;
+  padding: 60px 10%;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  background: #0f172a; /* match Contact Section */
+  border-top: 1px solid #1e293b;
+}
+
+.footer a {
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #6366f1;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+  .contact {
+    padding: 80px 5%;
+  }
+  .footer {
+    padding: 40px 5%;
+  }
+  input, textarea {
+    font-size: 0.95rem;
+  }
 }
