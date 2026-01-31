@@ -4,19 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sandesh Khatri | Portfolio</title>
- <!-- CSS -->
-<link rel="stylesheet" href="navbar.css">
-<link rel="stylesheet" href="hero.css">
-<link rel="stylesheet" href="about.css">
-<link rel="stylesheet" href="skills.css">
-<link rel="stylesheet" href="projects.css">
-<link rel="stylesheet" href="timeline.css">
-<link rel="stylesheet" href="certifications.css">
-<link rel="stylesheet" href="contact.css">
 
-<!-- JS -->
-<script src="script.js"></script>
+  <!-- FONTS & ICONS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+  <!-- CSS -->
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="hero.css">
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="skills.css">
+  <link rel="stylesheet" href="projects.css">
+  <link rel="stylesheet" href="timeline.css">
+  <link rel="stylesheet" href="certifications.css">
+  <link rel="stylesheet" href="contact.css">
+
+  <!-- JS -->
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -32,77 +38,77 @@
       <a href="#certifications">Certifications</a>
       <a href="#contact">Contact</a>
     </nav>
+    <div class="nav-toggle"><i class="fas fa-bars"></i></div>
   </header>
 
   <!-- HERO SECTION -->
-<section id="home" class="hero reveal">
-  <div class="container hero-container">
-    <!-- Left Side: Text Content -->
-    <div class="hero-left">
-      <h1 class="typed-text">Hi, I'm Sandesh Khatri</h1>
-      <h2 class="subtitle">Quarter-Stack Developer</h2>
-      <p class="hero-description">
-        I build scalable software, data-driven systems, and clean user experiences. Passionate about coding, design, and continuous learning.
-      </p>
-      <div class="hero-actions">
-        <button class="btn-primary" onclick="scrollToSection('projects')">View Projects</button>
-        <button class="btn-outline" onclick="scrollToSection('contact')">Contact Me</button>
+  <section id="home" class="hero reveal">
+    <div class="container hero-container">
+      <!-- Left Side -->
+      <div class="hero-left">
+        <h1 class="typed-text">Hi, I'm Sandesh Khatri</h1>
+        <h2 class="subtitle">Quarter-Stack Developer</h2>
+        <p class="hero-description">
+          I build scalable software, data-driven systems, and clean user experiences. Passionate about coding, design, and continuous learning.
+        </p>
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="scrollToSection('projects')">View Projects</button>
+          <button class="btn-outline" onclick="scrollToSection('contact')">Contact Me</button>
+        </div>
       </div>
-    </div>
-
-    <!-- Right Side: Image -->
-    <div class="hero-right">
-      <img src="imag1.jpeg" alt="Sandesh Khatri" class="hero-image">
-    </div>
-  </div>
-</section>
-
-
-  <!-- ABOUT -->
-  <section id="about" class="about reveal">
-    <div class="about-image">
-      <img src="imag2.jpeg">
-    </div>
-    <div class="about-content">
-      <h2>About Me</h2>
-      <p>I am a Computer Engineering student and Quarter-Stack Developer with strong fundamentals in software development, data structures, and data science.</p>
-      <p>I focus on writing clean, maintainable code and building systems that are efficient, scalable, and practical.</p>
+      <!-- Right Side -->
+      <div class="hero-right">
+        <img src="imag1.jpeg" alt="Sandesh Khatri" class="hero-image">
+      </div>
     </div>
   </section>
 
-  <!-- SKILLS -->
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about reveal">
+    <div class="container about-container">
+      <div class="about-image">
+        <img src="imag2.jpeg" alt="About Sandesh">
+      </div>
+      <div class="about-content">
+        <h2>About Me</h2>
+        <p>I am a Computer Engineering student and Quarter-Stack Developer with strong fundamentals in software development, data structures, and data science.</p>
+        <p>I focus on writing clean, maintainable code and building systems that are efficient, scalable, and practical.</p>
+        <div class="about-buttons">
+          <button class="btn-primary" onclick="scrollToSection('projects')">My Projects</button>
+          <button class="btn-outline" onclick="scrollToSection('contact')">Hire Me</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
   <section id="skills" class="skills reveal">
     <h2>Skills</h2>
     <div class="skills-grid">
-
       <div class="skill-card">
         <h3>C / C++</h3>
         <div class="progress-bar"><div class="progress" data-width="90%"></div></div>
         <span>90%</span>
       </div>
-
       <div class="skill-card">
         <h3>Python</h3>
         <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
         <span>85%</span>
       </div>
-
       <div class="skill-card">
         <h3>HTML, CSS, JS</h3>
         <div class="progress-bar"><div class="progress" data-width="95%"></div></div>
         <span>95%</span>
       </div>
-
       <div class="skill-card">
         <h3>DS & Algo</h3>
         <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
         <span>80%</span>
       </div>
-
     </div>
   </section>
 
-  <!-- PROJECTS -->
+  <!-- PROJECTS SECTION -->
   <section id="projects" class="projects reveal">
     <h2>Projects</h2>
     <div class="projects-grid">
@@ -121,7 +127,7 @@
     </div>
   </section>
 
-  <!-- TIMELINE -->
+  <!-- TIMELINE SECTION -->
   <section id="timeline" class="timeline reveal">
     <h2>Timeline</h2>
     <div class="timeline-container">
@@ -140,7 +146,7 @@
     </div>
   </section>
 
-  <!-- CERTIFICATIONS -->
+  <!-- CERTIFICATIONS SECTION -->
   <section id="certifications" class="certifications reveal">
     <h2>Certifications</h2>
     <div class="certs-grid">
@@ -150,20 +156,24 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- CONTACT SECTION -->
   <section id="contact" class="contact reveal">
     <h2>Contact</h2>
     <p>Let's collaborate or discuss projects. Reach out to me!</p>
     <form>
       <input type="text" placeholder="Name" required>
       <input type="email" placeholder="Email" required>
-      <textarea placeholder="Message"></textarea>
-      <button type="submit">Send Message</button>
+      <textarea placeholder="Message" required></textarea>
+      <button type="submit" class="btn-primary">Send Message</button>
     </form>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
-    <p>&copy; 2026 Sandesh Khatri. Connect on <a href="#">GitHub</a> | <a href="#">LinkedIn</a></p>
+    <p>&copy; 2026 Sandesh Khatri. Connect on 
+      <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a> | 
+      <a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </p>
   </footer>
 
 </body>
