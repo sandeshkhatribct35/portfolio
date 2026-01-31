@@ -1,0 +1,21 @@
+\.about{
+  display:grid;
+  grid-template-columns:0.9fr 1.1fr;
+  gap:80px;
+  align-items:center;
+  padding:120px 10%;
+}
+.about img{
+  width:100%;
+  max-width:340px;
+  border-radius:18px;
+}
+.about-content h2{
+  font-size:2.8rem;
+  margin-bottom:20px;
+}
+.about-content p{
+  color:#cbd5f5;
+  line-height:1.6;
+  margin-bottom:12px;
+}
