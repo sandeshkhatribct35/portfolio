@@ -1,45 +1,83 @@
-.skills{
-  padding:120px 10%;
+/* SKILLS SECTION */
+.skills {
+  padding: 120px 10%;
+  background: #0f172a; /* dark gradient background for contrast */
 }
-.skills h2{
-  font-size:2.8rem;
-  text-align:center;
+
+.skills h2 {
+  font-size: 3rem;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 40px;
+  position: relative;
 }
-.skills-grid{
-  margin-top:40px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:28px;
+
+.skills h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #6366f1; /* accent line under heading */
+  margin: 10px auto 0 auto;
+  border-radius: 2px;
 }
-.skill-card{
-  padding:30px;
-  border-radius:14px;
-  background:#020617;
-  transition:transform .3s;
-  position:relative;
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+  margin-top: 40px;
 }
-.skill-card:hover{
-  transform:translateY(-6px);
+
+.skill-card {
+  padding: 30px;
+  border-radius: 16px;
+  background: #020617;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  color: #cbd5f5;
+  font-weight: 500;
+  text-align: left;
+  transition: all 0.35s ease;
+  position: relative;
 }
-.progress-bar{
-  background:#334155;
-  border-radius:8px;
-  height:12px;
-  margin:12px 0;
-  overflow:hidden;
+
+.skill-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.5);
+  cursor: pointer;
 }
-.progress{
-  background:#2563eb;
-  height:100%;
-  width:0;
-  border-radius:8px;
-  transition:width 1.5s ease;
+
+.progress-bar {
+  background: #334155;
+  border-radius: 12px;
+  height: 14px;
+  margin: 16px 0;
+  overflow: hidden;
 }
-.skill-card span{
-  font-size:0.9rem;
-  color:#cbd5f5;
-  position:absolute;
-  top:50%;
-  right:16px;
-  transform:translateY(-50%);
+
+.progress {
+  background: #2563eb;
+  height: 100%;
+  width: 0; /* initial state, can animate via JS */
+  border-radius: 12px;
+  transition: width 1.5s ease-in-out;
+}
+
+.skill-card span {
+  font-size: 0.9rem;
+  color: #cbd5f5;
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+  .skills {
+    padding: 80px 5%;
+  }
+  .skill-card span {
+    right: 12px;
+  }
 }
